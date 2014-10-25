@@ -200,6 +200,7 @@
             print.newLine();
             output.push(ch);
             print.newLine();
+            print.newLine();
         };
 
         print._lastCharWhitespace = function() {
