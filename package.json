@@ -1,6 +1,6 @@
 {
   "name": "web-beautify",
-  "version": "1.5.4",
+  "version": "1.5.4a",
   "description": "jsbeautifier.org for node",
   "main": "js/index.js",
   "preferGlobal": true,
