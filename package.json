@@ -1,7 +1,7 @@
 {
-  "name": "web-beautify",
-  "version": "1.5.4a",
-  "description": "jsbeautifier.org for node",
+  "name": "sublime-beautify",
+  "version": "1.5.4b",
+  "description": "sublime beautify",
   "main": "js/index.js",
   "preferGlobal": true,
   "bin": {
@@ -18,7 +18,7 @@
     "update-codemirror": "npm install codemirror && rm -rf ./web/third-party/codemirror/* && cp ./node_modules/codemirror/LICENSE ./web/third-party/codemirror/ && cp ./node_modules/codemirror/README.md ./web/third-party/codemirror/ && cp -r ./node_modules/codemirror/lib ./web/third-party/codemirror/ && mkdir -p ./web/third-party/codemirror/mode && cp -r ./node_modules/codemirror/mode/javascript ./web/third-party/codemirror/mode/ && git add -Av ./web/third-party/codemirror"
   },
   "bugs": "https://github.com/sticeap/js-beautify/issues",
-  "homepage": "http://jsbeautifier.org/",
+  "homepage": "http://plu.ro/",
   "repository": {
     "type": "git",
     "url": "git://github.com/sticeap/js-beautify.git"
@@ -26,11 +26,12 @@
   "keywords": [
     "beautify",
     "beautifier",
-    "code-quality"
+    "code-quality",
+    "sublime-beautify"
   ],
-  "author": "Einar Lielmanis <einar@jsbeautifier.org>",
+  "author": "Sticea Paul <sticeap@gmail.com>",
   "contributors": [
-    "Sticea Paul <sticeap@gmail.com>",
+    "Einar Lielmanis <einar@jsbeautifier.org>",
     "Vital Batmanov <vital76@gmail.com>",
     "Chris J. Shull <chrisjshull@gmail.com>",
     "Gian Marco Gherardi <gianmarco.gherardi@gmail.com>",
