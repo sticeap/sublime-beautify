@@ -199,8 +199,8 @@
         print["}"] = function(ch) {
             print.newLine();
             output.push(ch);
-            print.newLine();
-            print.newLine();
+            //print.newLine();
+            print.newDubleLines();
         };
 
         print._lastCharWhitespace = function() {
@@ -217,6 +217,12 @@
             }
             if (basebaseIndentString) {
                 output.push(basebaseIndentString);
+            }
+        };
+
+        print.newDubleLines = function() {
+            if (output.length) {
+                output.push('\n\n');
             }
         };
         print.singleSpace = function() {
@@ -296,6 +302,7 @@
                     next();
                     print.singleSpace();
                     output.push("{}");
+                    print.newDubleLines();
                 } else {
                     indent();
                     print["{"](ch);
@@ -341,8 +348,13 @@
                 }
                 output.push(eatString(ch));
             } else if (ch === ';') {
-                output.push(ch);
-                print.newLine();
+                if(lookBack("import ")){
+                    output.push(ch);
+                    print.newDoubleLine();                    
+                }else{
+                    output.push(ch);
+                    print.newLine();
+                }
             } else if (ch === '(') { // may be a url
                 if (lookBack("url")) {
                     output.push(ch);
